@@ -153,7 +153,8 @@ The most important is that I make this code plus the size of the string so that 
 ### arcd decoding
 First, I initialize the "interval" array with upper[3]=1 and lower[0]=0, if there are 4 element in the array. Meanwhile I seperate the size from the code.
 
-Next, the code is between an upper bound and a lower bound of an element, so the first symbol of the decode result will be the type of the symbol that is correspond to the pair of upper and lower bound,  and the correspond upper bound and lower bound will be chosen to be the next upper[3] and lower[0]. After that, use the adjusted "interval" array and the code to get the next symbol, and get the correspond symbol as the deocode result ,and adjust "interval" array,and so on.
+Next, the code is between an upper bound and a lower bound of an element, so the first symbol of the decode result will be the type of the symbol that is correspond to the pair of upper and lower bound,  and the correspond upper bound and lower bound will be chosen to be the next upper[3] and lower[0].   
+After that, use the adjusted "interval" array and the code to get the next symbol, and get the correspond symbol as the deocode result ,and adjust "interval" array,and so on.
 Until the number of the gotten symbol is equal to the size, the decode result is complete.
 (by "arcd_dec" function)
 ```sh
